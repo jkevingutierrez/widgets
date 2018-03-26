@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --base-href '/widgets/'",
+    "build:local": "ng build --prod",
     "test": "ng test --watch=false",
     "test:watch": "ng test",
     "lint": "ng lint",

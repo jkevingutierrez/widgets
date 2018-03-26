@@ -47,3 +47,11 @@ jobs:
                 key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
                 paths:
                     - dist
+            # Deploy project
+            - deploy:
+                name: Deploy on GitHub Pages
+                command: |
+                  if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                    ./scripts/deploy-ghpages.sh dist
+                  fi
+
