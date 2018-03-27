@@ -17,9 +17,9 @@ export class BlogPostComponent implements OnInit {
   post: Post;
 
   constructor(private domSanitizer: DomSanitizer, public matIconRegistry: MatIconRegistry, private postService: PostService) {
-    matIconRegistry.addSvgIcon('views', domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/preview.svg'));
-    matIconRegistry.addSvgIcon('comments', domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/bubble.svg'));
-    matIconRegistry.addSvgIcon('likes', domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/like.svg'));
+    matIconRegistry.addSvgIcon('views', domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/preview.svg'));
+    matIconRegistry.addSvgIcon('comments', domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/bubble.svg'));
+    matIconRegistry.addSvgIcon('likes', domSanitizer.bypassSecurityTrustResourceUrl('./assets/images/like.svg'));
   }
 
   ngOnInit() {
