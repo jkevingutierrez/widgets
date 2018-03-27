@@ -19,6 +19,22 @@ body {
   position: relative;
 }
 
+a {
+  color: #7b6d5e;
+}
+
+a:hover,
+a:focus {
+  color: #e05033;
+
+  svg {
+    path {
+      fill: rgb(232, 103, 65);
+    }
+  }
+
+}
+
 .container-wide {
   margin: 0 auto;
   @media (min-width: 1200px) {
@@ -36,4 +52,11 @@ body {
   box-shadow: 0 0 12px rgba(58, 51, 46, 0.2);
   margin-bottom: 30px;
   position: relative;
+}
+
+svg {
+  path {
+    fill: rgb(153, 140, 127);
+    opacity: 1;
+  }
 }
