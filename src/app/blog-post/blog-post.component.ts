@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { Post } from './post';
-import { User } from '../profile/user';
+import { Post } from '../entities/post';
+import { User } from '../entities//user';
 
 @Component({
   selector: 'app-blog-post',

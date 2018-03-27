@@ -9,18 +9,29 @@ import { ProfileComponent } from './profile/profile.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
+import { LangModule } from './lang/lang.module';
 
+import { LangService } from './lang/lang.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, BrowserAnimationsModule, HttpClientModule, MatIconModule, MatSelectModule ],
+      imports: [
+        FormsModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatIconModule,
+        MatSelectModule,
+        LangModule
+      ],
       declarations: [
         AppComponent,
         ContactFormComponent,
         ProfileComponent,
         BlogPostComponent
       ],
+      providers: [LangService]
     }).compileComponents();
   }));
 

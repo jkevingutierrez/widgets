@@ -1,4 +1,4 @@
-import { User } from '../profile/user';
+import { User } from './user';
 
 export class Post {
   views: number;

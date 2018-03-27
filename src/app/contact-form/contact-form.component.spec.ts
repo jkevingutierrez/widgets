@@ -2,6 +2,9 @@ import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactFormComponent } from './contact-form.component';
+import { LangModule } from '../lang/lang.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 describe('ContactFormComponent', () => {
   let component: ContactFormComponent;
@@ -9,7 +12,7 @@ describe('ContactFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
+      imports: [ FormsModule, LangModule, HttpClientModule ],
       declarations: [ ContactFormComponent ]
     })
     .compileComponents();
