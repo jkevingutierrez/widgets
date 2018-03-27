@@ -5,11 +5,13 @@ export const USERS: User[] = [{
   firstName: 'Courtney',
   lastName: 'Timmons',
   image: './assets/images/avatar2.png',
-  followers: 15323
+  followers: 15323,
+  email: 'courtney@test.com'
 }, {
   id: 2,
   firstName: 'John',
   lastName: 'Raymons',
   image: './assets/images/avatar.png',
-  followers: 0
+  followers: 0,
+  email: 'john@test.com'
 }];

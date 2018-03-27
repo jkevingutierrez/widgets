@@ -1,8 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileComponent } from './profile.component';
 import { LangModule } from '../lang/lang.module';
-import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './profile.component';
 
 import { UserService } from '../services/user.service';
 

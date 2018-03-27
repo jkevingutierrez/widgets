@@ -10,7 +10,6 @@ button {
 }
 
 .form-container {
-
   .form-inner {
     padding: 27px 26px 21px;
   }
@@ -39,52 +38,74 @@ button {
     background: #f6f0ec;
     border-radius: 0 0 5px 5px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 21px 26px;
+    padding: 20px 10px;
+
+    .button {
+      background: rgb(233, 106, 70) linear-gradient(to bottom, rgb(237, 231, 230) 0%, rgb(233, 106, 70) 2%, rgb(228, 88, 53) 100%);
+      border: 1px solid #c44a28;
+      border-radius: 5px;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, .5), 1px 2px 5px rgba(154, 125, 108, .6);
+      color: #fff;
+      display: block;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ede7e6', endColorstr='#e45835', GradientType=0);
+      font-size: 16px;
+      font-weight: 400;
+      height: 45px;
+      line-height: 41px;
+      margin: 10px 5px;
+      margin-left: 1em;
+      padding: 0 15px;
+      padding-left: 40px;
+      position: relative;
+      text-shadow: none;
+      white-space: nowrap;
+
+      &:hover {
+        background: rgb(238, 135, 101) linear-gradient(to bottom, rgb(237, 231, 230) 0%, rgb(238, 135, 101) 2%, rgb(228, 88, 53) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ede7e6', endColorstr='#e45835', GradientType=0);
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+      }
+
+      &::before {
+        background: rgb(228, 109, 85);
+        border-radius: 50%;
+        bottom: 0;
+        height: 20px;
+        left: 15px;
+        margin: auto;
+        opacity: 1;
+        top: 0;
+        width: 20px;
+      }
+
+      &::after {
+        border-bottom: 3px solid transparent;
+        border-left: 6px solid #fff;
+        border-top: 3px solid transparent;
+        bottom: 0;
+        height: 0;
+        left: 23px;
+        margin: auto;
+        top: 0;
+        width: 0;
+      }
+    }
   }
 }
 
-.ng-dirty {
+input.ng-dirty,
+textarea.ng-dirty,
+input.ng-touched,
+textarea.ng-touched {
   &.ng-invalid {
     border: 1px solid #e86741;
-  }
-}
-
-.custom-checkbox {
-  input {
-    position: absolute;
-    top: 3px;
-    left: 13px;
-    margin: 0;
-    border: none;
-    width: 1px;
-    height: 1px;
-    display: none;
-  }
-}
-
-.button {
-  margin: 0 .2em;
-  display: block;
-  height: 45px;
-  line-height: 41px;
-  border: 1px solid #c44a28;
-  padding: 0 25px;
-  border-radius: 5px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 1px 2px 5px rgba(154, 125, 108, 0.6);
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  white-space: nowrap;
-  text-shadow: none;
-  background: rgb(233, 106, 70);
-  background: linear-gradient(to bottom, rgb(237, 231, 230) 0%, rgb(233, 106, 70) 2%, rgb(228, 88, 53) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ede7e6', endColorstr='#e45835', GradientType=0);
-
-  &:hover {
-    background: rgb(238, 135, 101);
-    background: linear-gradient(to bottom, rgb(237, 231, 230) 0%, rgb(238, 135, 101) 2%, rgb(228, 88, 53) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ede7e6', endColorstr='#e45835', GradientType=0);
   }
 }
 
@@ -118,7 +139,6 @@ textarea:-ms-input-placeholder {
   color: #c9c2bc;
   font-size: 13px;
 }
-
 
 input:focus::-webkit-input-placeholder {
   color: transparent;

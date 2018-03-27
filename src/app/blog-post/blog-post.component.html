@@ -8,19 +8,28 @@
         <img [src]="post.owner.image" [alt]="post.owner.firstName + ' ' + post.owner.lastName">
       </div>
       <div class="post-content--text">
-          <h5>{{ post.owner.firstName + ' ' + post.owner.lastName }}</h5>
-          <span class="subtitle">{{ post.text }}</span>
+        <h5>{{ post.owner.firstName + ' ' + post.owner.lastName }}</h5>
+        <span class="subtitle">{{ post.text }}</span>
       </div>
     </div>
     <div class="post-links">
       <div class="post-link">
-        <a href="#"><mat-icon svgIcon="views"></mat-icon><span>{{ post.views }}</span></a>
+        <a href="#" [title]="'VIEWS' | translate">
+          <mat-icon svgIcon="views"></mat-icon>
+          <span>{{ post.views }}</span>
+        </a>
       </div>
       <div class="post-link">
-        <a href="#"><mat-icon svgIcon="comments"></mat-icon><span>{{ post.comments }}</span></a>
+        <a href="#" [title]="'COMMENTS' | translate">
+          <mat-icon svgIcon="comments"></mat-icon>
+          <span>{{ post.comments }}</span>
+        </a>
       </div>
       <div class="post-link">
-        <a href="#"><mat-icon svgIcon="likes"></mat-icon><span>{{ post.likes }}</span></a>
+        <a href="#" [title]="'LIKES' | translate">
+          <mat-icon svgIcon="likes"></mat-icon>
+          <span>{{ post.likes }}</span>
+        </a>
       </div>
     </div>
   </div>

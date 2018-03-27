@@ -1,27 +1,33 @@
 <section class="widget">
   <div class="form-container">
-    <form>
+    <form (ngSubmit)="sendEmail()">
       <div class="form-inner">
         <div class="field-select">
-          <label for="contactName" class="label-title">{{ 'CONTACTS' | translate }}</label>
-          <select name="contactName" id="contactName" multiple></select>
+          <label for="contactsNames" class="label-title">{{ 'CONTACTS' | translate }}</label>
+          <ng-select [items]="users$ | async" [multiple]="true" bindLabel="mail" [(ngModel)]="mail.contacts" name="contactsNames" required>
+            <ng-template ng-label-tmp let-item="item" let-clear="clear">
+              <span class="ng-value-label">{{ item.email }}</span>
+              <span class="ng-value-icon right" (click)="clear(item); $event.stopPropagation()" aria-hidden="true">×</span>
+            </ng-template>
+            <ng-template ng-option-tmp let-item="item">
+              {{ item.email }}
+            </ng-template>
+          </ng-select>
         </div>
         <div class="field-text">
           <label for="subject" class="label-title">{{ 'SUBJECT' | translate }}</label>
-          <input type="text" name="subject" id="subject" value="" [placeholder]="'SUBJECT_PLACEHOLDER' | translate" class="inputtext" required [(ngModel)]="form.subject">
+          <input type="text" name="subject" id="subject" value="" [placeholder]="'SUBJECT_PLACEHOLDER' | translate" class="inputtext"
+            required [(ngModel)]="mail.subject">
         </div>
         <div class="field-text field-textarea">
           <label for="message" class="label-title">{{ 'MESSAGE' | translate }}</label>
-          <textarea name="message" id="message" [placeholder]="'MESSAGE_PLACEHOLDER' | translate" class="textarea" required [(ngModel)]="form.message"></textarea>
+          <textarea name="message" id="message" [placeholder]="'MESSAGE_PLACEHOLDER' | translate" class="textarea" required [(ngModel)]="mail.message"></textarea>
         </div>
         <div class="submit clearfix">
           <div class="checklist">
-            <div class="custom-checkbox">
-              <input name="save" type="checkbox" checked="" id="save" value="save" hidefocus="true">
-              <label for="save" class="checked">{{ 'SAVE_COPY' | translate }}</label>
-            </div>
+            <mat-checkbox [(ngModel)]="mail.saveACopy" name="save_a_copy">{{ 'SAVE_COPY' | translate }}</mat-checkbox>
           </div>
-          <button class="button" id="send">{{ 'SEND_MAIL' | translate }}</button>
+          <button type="submit" class="button" id="send">{{ 'SEND_MAIL' | translate }}</button>
         </div>
       </div>
     </form>

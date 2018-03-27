@@ -11,7 +11,7 @@ import { LangService } from './services/lang.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  languages: Observable<Lang[]>;
+  languages$: Observable<Lang[]>;
   defaultLangCode = 'en';
 
   selectedLanguage: Lang;
@@ -23,8 +23,8 @@ export class AppComponent {
 
     translate.use(this.defaultLangCode);
 
-    this.languages = this.langService.get();
-    this.languages.subscribe(languages => this.selectedLanguage = languages.find(lang => lang.code === this.defaultLangCode));
+    this.languages$ = this.langService.get();
+    this.languages$.subscribe(languages => this.selectedLanguage = languages.find(lang => lang.code === this.defaultLangCode));
   }
 
   changeLang() {

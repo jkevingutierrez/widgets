@@ -1,8 +1,11 @@
 <section class="widget" *ngIf="user">
   <div class="widget-header">
-    <div class="widget-header--avatar"><img [src]="user.image" [alt]="user.firstName + ' ' + user.lastName"></div>
+    <div class="widget-header--avatar">
+      <img [src]="user.image" [alt]="user.firstName + ' ' + user.lastName">
+    </div>
     <div class="widget-header--text">
-      <h5>{{ user.firstName }}<br>{{ user.lastName }}</h5>
+      <h5>{{ user.firstName }}
+        <br>{{ user.lastName }}</h5>
       <span class="subtitle">{{ user.followers | number:'3.0' }} {{ 'FOLLOWERS' | translate}}</span>
     </div>
   </div>

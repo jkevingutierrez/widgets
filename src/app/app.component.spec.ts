@@ -1,16 +1,18 @@
 import { FormsModule } from '@angular/forms';
-import { TestBed, async } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { TestBed, async } from '@angular/core/testing';
 
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { LangModule } from './lang/lang.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
-import { MatSelectModule } from '@angular/material/select';
-import { MatIconModule } from '@angular/material/icon';
-import { LangModule } from './lang/lang.module';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { LangService } from './services/lang.service';
 import { UserService } from './services/user.service';
@@ -25,6 +27,8 @@ describe('AppComponent', () => {
         HttpClientModule,
         MatIconModule,
         MatSelectModule,
+        MatCheckboxModule,
+        NgSelectModule,
         LangModule
       ],
       declarations: [

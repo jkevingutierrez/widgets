@@ -1,7 +1,11 @@
-{
+  {
+  "SELECT_LANGUAGE": "Seleccionar idioma",
   "CONTACTS": "Contactos",
   "SUBJECT": "Tema",
   "MESSAGE": "Mensaje",
+  "VIEWS": "Vistas",
+  "COMMENTS": "Comentarios",
+  "LIKES": "Me gusta",
   "SUBJECT_PLACEHOLDER": "Agrega un tema",
   "MESSAGE_PLACEHOLDER": "Deja un mensaje aquí",
   "SEND_MAIL": "Enviar correo",

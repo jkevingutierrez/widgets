@@ -1,10 +1,13 @@
 import { FormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactFormComponent } from './contact-form.component';
 import { LangModule } from '../lang/lang.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { ContactFormComponent } from './contact-form.component';
 
+import { UserService } from '../services/user.service';
 
 describe('ContactFormComponent', () => {
   let component: ContactFormComponent;
@@ -12,8 +15,9 @@ describe('ContactFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule, LangModule, HttpClientModule ],
-      declarations: [ ContactFormComponent ]
+      imports: [ FormsModule, LangModule, HttpClientModule, NgSelectModule, MatCheckboxModule ],
+      declarations: [ ContactFormComponent ],
+      providers: [ UserService ]
     })
     .compileComponents();
   }));
