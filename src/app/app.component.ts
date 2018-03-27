@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  languages = ['en', 'es'];
+  selectedLanguage = this.languages[0];
 }

@@ -1,0 +1,106 @@
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+li a {
+  border-left: 3px solid transparent;
+  color: #7b6d5e;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 12px 32px;
+  position: relative;
+}
+
+a:hover,
+a:focus {
+  color: #8D8569;
+  text-decoration: none;
+}
+
+h5 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 16px;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+}
+
+li:hover a {
+  background: #f6f0ec;
+  border-left: 3px solid #40a268;
+}
+
+.widget-header {
+  align-items: center;
+  background: #b1a599;
+  box-shadow: inset 0 -2px 2px rgba(73, 73, 73, 0.16);
+  display: flex;
+  padding: 25px 20px;
+
+  &--avatar {
+    border: 1px solid #8b7f73;
+    border-radius: 50%;
+    display: block;
+    left: 10px;
+    overflow: hidden;
+    padding: 7px;
+    top: 13px;
+  }
+
+  &--text {
+    margin-left: 1em;
+
+    .subtitle {
+      color: #857a70;
+      font-size: 12px;
+    }
+  }
+}
+
+.widget-body {
+  padding: 12px 0;
+}
+
+.ico-cat {
+  background-image: url('../../assets/images/profile_icons.png');
+  float: right;
+  height: 20px;
+  margin: 0;
+  width: 20px;
+
+  &.ico-user {
+    background-position: 0 0;
+  }
+
+  &.ico-statistics {
+    background-position: -20px 0;
+  }
+
+  &.ico-settings {
+    background-position: -40px 0;
+  }
+
+  &.ico-events {
+    background-position: -60px 0;
+  }
+}
+
+li:hover a .ico-user {
+  background-position: 0 -20px;
+}
+
+li:hover a .ico-statistics {
+  background-position: -20px -20px;
+}
+
+li:hover a .ico-settings {
+  background-position: -40px -20px;
+}
+
+li:hover a .ico-events {
+  background-position: -60px -20px;
+}

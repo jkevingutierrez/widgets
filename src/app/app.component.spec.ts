@@ -1,11 +1,20 @@
+import { FormsModule } from '@angular/forms';
 import { TestBed, async } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MatSelectModule } from '@angular/material/select';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule, MatSelectModule, BrowserAnimationsModule ],
       declarations: [
-        AppComponent
+        AppComponent,
+        ContactFormComponent,
+        ProfileComponent
       ],
     }).compileComponents();
   }));
@@ -26,6 +35,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+    expect(compiled.querySelector('.container')).toBeTruthy();
   }));
 });

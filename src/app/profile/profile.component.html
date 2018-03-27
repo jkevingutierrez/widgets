@@ -1,0 +1,37 @@
+<section class="widget">
+  <div class="widget-header">
+    <div class="widget-header--avatar"><img src="../../assets/images/avatar.png" alt=""></div>
+    <div class="widget-header--text">
+      <h5>{{ user.firstName }}<br>{{ user.lastName }}</h5>
+      <span class="subtitle">{{ user.followers | number:'3.0' }} followers</span>
+    </div>
+  </div>
+  <div class="widget-body">
+    <ul>
+      <li>
+        <a href="#">
+          <span>Edit user</span>
+          <i class="ico-cat ico-user"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Web statistics</span>
+          <i class="ico-cat ico-statistics"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Upload settings</span>
+          <i class="ico-cat ico-settings"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>Events</span>
+          <i class="ico-cat ico-events"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
