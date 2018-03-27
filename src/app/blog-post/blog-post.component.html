@@ -1,14 +1,14 @@
-<section class="widget">
+<section class="widget" *ngIf="post">
   <div class="widget-header">
     <img [src]="post.cover" alt="Post Image">
   </div>
   <div class="widget-body">
     <div class="post-content">
       <div class="post-content--avatar">
-        <img [src]="post.owner.image" [alt]="post.owner.fullName">
+        <img [src]="post.owner.image" [alt]="post.owner.firstName + ' ' + post.owner.lastName">
       </div>
       <div class="post-content--text">
-          <h5>{{ post.owner.fullName }}</h5>
+          <h5>{{ post.owner.firstName + ' ' + post.owner.lastName }}</h5>
           <span class="subtitle">{{ post.text }}</span>
       </div>
     </div>

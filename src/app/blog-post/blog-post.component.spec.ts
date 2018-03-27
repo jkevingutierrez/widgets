@@ -5,6 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { BlogPostComponent } from './blog-post.component';
 
+import { PostService } from '../services/post.service';
+
 describe('BlogPostComponent', () => {
   let component: BlogPostComponent;
   let fixture: ComponentFixture<BlogPostComponent>;
@@ -12,7 +14,8 @@ describe('BlogPostComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ MatIconModule, HttpClientModule ],
-      declarations: [ BlogPostComponent ]
+      declarations: [ BlogPostComponent ],
+      providers: [ PostService ]
     })
     .compileComponents();
   }));

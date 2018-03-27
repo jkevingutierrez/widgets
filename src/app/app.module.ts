@@ -6,13 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 
+import { LangModule } from './lang/lang.module';
+
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 
-import { LangModule } from './lang/lang.module';
-import { LangService } from './lang/lang.service';
+import { LangService } from './services/lang.service';
+import { UserService } from './services/user.service';
+import { PostService } from './services/post.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,7 @@ import { LangService } from './lang/lang.service';
     MatIconModule,
     LangModule
   ],
-  providers: [ LangService ],
+  providers: [LangService, UserService, PostService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

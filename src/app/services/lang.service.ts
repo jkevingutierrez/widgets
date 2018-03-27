@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
 import { Lang } from '../entities/lang';
-import { LANGS } from '../mocks/lang-mocks';
+import { LANGS } from '../mocks/langs-mock';
 
 @Injectable()
 export class LangService {

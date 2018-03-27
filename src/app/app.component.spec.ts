@@ -10,9 +10,11 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { LangModule } from './lang/lang.module';
-
-import { LangService } from './lang/lang.service';
 import { TranslateModule } from '@ngx-translate/core';
+
+import { LangService } from './services/lang.service';
+import { UserService } from './services/user.service';
+import { PostService } from './services/post.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -31,7 +33,7 @@ describe('AppComponent', () => {
         ProfileComponent,
         BlogPostComponent
       ],
-      providers: [LangService]
+      providers: [ LangService, UserService, PostService ]
     }).compileComponents();
   }));
 

@@ -3,7 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs/Observable';
 
 import { Lang } from './entities/lang';
-import { LangService } from './lang/lang.service';
+import { LangService } from './services/lang.service';
 
 @Component({
   selector: 'app-root',

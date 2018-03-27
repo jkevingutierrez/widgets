@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { Post } from '../entities/post';
 import { User } from '../entities//user';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-blog-post',
@@ -14,24 +16,14 @@ export class BlogPostComponent implements OnInit {
 
   post: Post;
 
-  constructor(private domSanitizer: DomSanitizer, public matIconRegistry: MatIconRegistry) {
+  constructor(private domSanitizer: DomSanitizer, public matIconRegistry: MatIconRegistry, private postService: PostService) {
     matIconRegistry.addSvgIcon('views', domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/preview.svg'));
     matIconRegistry.addSvgIcon('comments', domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/bubble.svg'));
     matIconRegistry.addSvgIcon('likes', domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/like.svg'));
   }
 
   ngOnInit() {
-    this.post = new Post();
-
-    this.post.views = 172;
-    this.post.comments = 34;
-    this.post.likes = 210;
-    this.post.cover = '/assets/images/cover.jpg';
-    this.post.text = 'Your talent amazes! This is awesome. Excited to see the final product.';
-    this.post.owner = new User();
-    this.post.owner.firstName = 'John';
-    this.post.owner.lastName = 'Raymons';
-    this.post.owner.image = '/assets/images/avatar.png';
+    this.postService.getById(1).subscribe(post => this.post = post);
   }
 
 }

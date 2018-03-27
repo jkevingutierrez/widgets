@@ -4,6 +4,8 @@ import { ProfileComponent } from './profile.component';
 import { LangModule } from '../lang/lang.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { UserService } from '../services/user.service';
+
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;
@@ -11,7 +13,8 @@ describe('ProfileComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ LangModule, HttpClientModule ],
-      declarations: [ ProfileComponent ]
+      declarations: [ ProfileComponent ],
+      providers: [ UserService ]
     })
     .compileComponents();
   }));
