@@ -7,8 +7,7 @@ describe('widgets App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should navigate to page', () => {
     page.navigateTo();
-    expect(page.getParagraphText());
   });
 });
