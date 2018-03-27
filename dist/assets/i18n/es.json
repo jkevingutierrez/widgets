@@ -1,0 +1,18 @@
+  {
+  "SELECT_LANGUAGE": "Seleccionar idioma",
+  "CONTACTS": "Contactos",
+  "SUBJECT": "Tema",
+  "MESSAGE": "Mensaje",
+  "VIEWS": "Vistas",
+  "COMMENTS": "Comentarios",
+  "LIKES": "Me gusta",
+  "SUBJECT_PLACEHOLDER": "Agrega un tema",
+  "MESSAGE_PLACEHOLDER": "Deja un mensaje aquí",
+  "SEND_MAIL": "Enviar correo",
+  "SAVE_COPY": "Guardar copia",
+  "EDIT_USER": "Editar usuario",
+  "WEB_STATISTICS": "Estadísticas web",
+  "UPLOAD_SETTINGS": "Configuraciones de carga",
+  "EVENTS": "Eventos",
+  "FOLLOWERS": "Seguidores"
+}
