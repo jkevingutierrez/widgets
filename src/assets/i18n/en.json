@@ -1,0 +1,14 @@
+{
+  "CONTACTS": "Contacts",
+  "SUBJECT": "Subject",
+  "MESSAGE": "Message",
+  "SUBJECT_PLACEHOLDER": "You can add a subject",
+  "MESSAGE_PLACEHOLDER": "Leave your message here",
+  "SEND_MAIL": "Send Mail",
+  "SAVE_COPY": "Save a copy",
+  "EDIT_USER": "Edit user",
+  "WEB_STATISTICS": "Web statistics",
+  "UPLOAD_SETTINGS": "Upload settings",
+  "EVENTS": "Events",
+  "FOLLOWERS": "followers"
+}

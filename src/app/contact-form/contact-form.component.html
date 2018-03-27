@@ -3,25 +3,25 @@
     <form>
       <div class="form-inner">
         <div class="field-select">
-          <label for="contactName" class="label-title">Contacts</label>
+          <label for="contactName" class="label-title">{{ 'CONTACTS' | translate }}</label>
           <select name="contactName" id="contactName" multiple></select>
         </div>
         <div class="field-text">
-          <label for="subject" class="label-title">Subject</label>
-          <input type="text" name="subject" id="subject" value="" placeholder="You can add a subject" class="inputtext" required [(ngModel)]="form.subject">
+          <label for="subject" class="label-title">{{ 'SUBJECT' | translate }}</label>
+          <input type="text" name="subject" id="subject" value="" [placeholder]="'SUBJECT_PLACEHOLDER' | translate" class="inputtext" required [(ngModel)]="form.subject">
         </div>
         <div class="field-text field-textarea">
-          <label for="message" class="label-title">Message</label>
-          <textarea name="message" id="message" placeholder="Leave your message here" class="textarea" required [(ngModel)]="form.message"></textarea>
+          <label for="message" class="label-title">{{ 'MESSAGE' | translate }}</label>
+          <textarea name="message" id="message" [placeholder]="'MESSAGE_PLACEHOLDER' | translate" class="textarea" required [(ngModel)]="form.message"></textarea>
         </div>
         <div class="submit clearfix">
           <div class="checklist">
             <div class="custom-checkbox">
               <input name="save" type="checkbox" checked="" id="save" value="save" hidefocus="true">
-              <label for="save" class="checked">Save a copy</label>
+              <label for="save" class="checked">{{ 'SAVE_COPY' | translate }}</label>
             </div>
           </div>
-          <button class="button" id="send">Send Mail</button>
+          <button class="button" id="send">{{ 'SEND_MAIL' | translate }}</button>
         </div>
       </div>
     </form>

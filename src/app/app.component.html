@@ -4,9 +4,9 @@
       <div class="grid-x">
         <div class="cell large-2">
           <mat-form-field>
-            <mat-select placeholder="Select language">
-              <mat-option *ngFor="let language of languages" [value]="selectedLanguage">
-                {{ language }}
+            <mat-select placeholder="Select language" [(ngModel)]="selectedLanguage" (change)="changeLang()">
+              <mat-option *ngFor="let language of languages | async" [value]="language">
+                {{ language.nativeName }}
               </mat-option>
             </mat-select>
           </mat-form-field>

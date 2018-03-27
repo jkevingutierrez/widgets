@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
     this.user.firstName = 'Courtney';
     this.user.lastName = 'Timmons';
     this.user.followers = 15323;
-    this.user.image = '../../assets/images/avatar2.png';
+    this.user.image = '/assets/images/avatar2.png';
   }
 
   modifyPinMapIcon(icon: string) {

@@ -3,32 +3,32 @@
     <div class="widget-header--avatar"><img [src]="user.image" [alt]="user.fullName"></div>
     <div class="widget-header--text">
       <h5>{{ user.firstName }}<br>{{ user.lastName }}</h5>
-      <span class="subtitle">{{ user.followers | number:'3.0' }} followers</span>
+      <span class="subtitle">{{ user.followers | number:'3.0' }} {{ 'FOLLOWERS' | translate}}</span>
     </div>
   </div>
   <div class="widget-body">
     <ul>
       <li>
         <a href="#">
-          <span>Edit user</span>
+          <span>{{ 'EDIT_USER' | translate }}</span>
           <i class="ico-cat ico-user"></i>
         </a>
       </li>
       <li>
         <a href="#">
-          <span>Web statistics</span>
+          <span>{{ 'WEB_STATISTICS' | translate }}</span>
           <i class="ico-cat ico-statistics"></i>
         </a>
       </li>
       <li>
         <a href="#">
-          <span>Upload settings</span>
+          <span>{{ 'UPLOAD_SETTINGS' | translate }}</span>
           <i class="ico-cat ico-settings"></i>
         </a>
       </li>
       <li>
         <a href="#">
-          <span>Events</span>
+          <span>{{ 'EVENTS' | translate }}</span>
           <i class="ico-cat ico-events"></i>
         </a>
       </li>
