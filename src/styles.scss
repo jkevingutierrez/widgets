@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+// Angular material
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// Foundation
+@import '~foundation-sites/scss/util/util';
+@import '~foundation-sites/scss/foundation';
+@include foundation-everything(true);
+
+// Motion-ui
+@import '~motion-ui/motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+body {
+  background: url('assets/images/background.jpg') center top repeat;
+  background-size: 100%;
+  color: #8e8071;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+
+.container-wide {
+  margin: 0 auto;
+  @media (min-width: 1200px) {
+    max-width: 1070px;
+  }
+}
+
+.content {
+  padding: 50px 0;
+}
+
+.widget {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 12px rgba(58, 51, 46, 0.2);
+  margin-bottom: 30px;
+  position: relative;
+}

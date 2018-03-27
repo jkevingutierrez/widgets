@@ -1,0 +1,29 @@
+<section class="widget">
+  <div class="form-container">
+    <form>
+      <div class="form-inner">
+        <div class="field-select">
+          <label for="contactName" class="label-title">Contacts</label>
+          <select name="contactName" id="contactName" multiple></select>
+        </div>
+        <div class="field-text">
+          <label for="subject" class="label-title">Subject</label>
+          <input type="text" name="subject" id="subject" value="" placeholder="You can add a subject" class="inputtext" required [(ngModel)]="form.subject">
+        </div>
+        <div class="field-text field-textarea">
+          <label for="message" class="label-title">Message</label>
+          <textarea name="message" id="message" placeholder="Leave your message here" class="textarea" required [(ngModel)]="form.message"></textarea>
+        </div>
+        <div class="submit clearfix">
+          <div class="checklist">
+            <div class="custom-checkbox">
+              <input name="save" type="checkbox" checked="" id="save" value="save" hidefocus="true">
+              <label for="save" class="checked">Save a copy</label>
+            </div>
+          </div>
+          <button class="button" id="send">Send Mail</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

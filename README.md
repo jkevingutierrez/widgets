@@ -6,6 +6,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+## Data Config
+
+You can modify the dynamic data in the mocks files. You just need to edit the files in the folder [`src/app/mocks/`](./src/app/mocks)
+
+## Requirements 
+
+The project was tested using: 
+
+- node 8.10.0
+- npm 5.8.0
+- chrome 65
+- firefox 59
+
+## Install 
+
+run `npm install` in the folder directory.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
