@@ -14,5 +14,9 @@
   "WEB_STATISTICS": "Web statistics",
   "UPLOAD_SETTINGS": "Upload settings",
   "EVENTS": "Events",
-  "FOLLOWERS": "followers"
+  "FOLLOWERS": "Followers",
+  "UPLOAD_FILES": "Upload files",
+  "SHARE_LINK": "Share link",
+  "BACK_UP": "Back up",
+  "FILES": "files"
 }
