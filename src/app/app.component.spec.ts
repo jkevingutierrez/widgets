@@ -6,6 +6,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
 import { LangModule } from './lang/lang.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -13,10 +14,12 @@ import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 import { LangService } from './services/lang.service';
 import { UserService } from './services/user.service';
 import { PostService } from './services/post.service';
+import { DataService } from './services/data.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -28,6 +31,7 @@ describe('AppComponent', () => {
         MatIconModule,
         MatSelectModule,
         MatCheckboxModule,
+        MatTabsModule,
         NgSelectModule,
         LangModule
       ],
@@ -35,9 +39,15 @@ describe('AppComponent', () => {
         AppComponent,
         ContactFormComponent,
         ProfileComponent,
-        BlogPostComponent
+        BlogPostComponent,
+        StatisticsComponent
       ],
-      providers: [ LangService, UserService, PostService ]
+      providers: [
+        LangService,
+        UserService,
+        PostService,
+        DataService
+      ]
     }).compileComponents();
   }));
 

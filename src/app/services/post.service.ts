@@ -17,6 +17,4 @@ export class PostService {
   getById(id: number): Observable<Post> {
     return of(POSTS.find(post => id === post.id));
   }
-
-
 }

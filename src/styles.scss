@@ -13,6 +13,7 @@
 
 @import '~@ng-select/ng-select/themes/default.theme.css';
 
+// global
 body {
   background: url('assets/images/background.jpg') center top repeat;
   background-size: 100%;
@@ -28,8 +29,8 @@ a {
   &:focus {
     color: #e05033;
 
-    svg {
-      path {
+    .mat-icon:not(.no-hover) {
+      svg path {
         fill: rgb(232, 103, 65);
       }
     }
@@ -55,15 +56,23 @@ a {
   position: relative;
 }
 
+// mat-icon
 .mat-icon {
-  svg {
-    path {
-      fill: rgb(153, 140, 127);
-      opacity: 1;
-    }
+  svg path {
+    fill: rgb(153, 140, 127);
+    opacity: 1;
+  }
+
+  &.upload {
+    width: 32px;
+  }
+
+  &.backup {
+    width: 28px;
   }
 }
 
+// mat-checkbox
 .mat-checkbox {
   margin-right: 1em;
 
@@ -86,13 +95,82 @@ a {
   }
 
   .mat-checkbox-checkmark-path {
-    stroke: #2bb081 !important;
+    stroke: #49ad78 !important;
     stroke-width: 3px;
+  }
+}
+
+// mat-tab
+.mat-tab-group {
+  .mat-tab-header {
+    .mat-tab-label {
+      border: 1px solid #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      box-shadow: 0 -5px 5px rgba(146, 119, 48, .18);
+      color: #fff;
+      margin-right: 3px;
+      min-width: 0;
+      opacity: 1;
+      padding: 0 16px;
+
+      &:not(.mat-tab-disabled):focus {
+        background: #fff;
+      }
+
+      &.mat-tab-label-active {
+        background: #fff;
+        color: #8e8071;
+        opacity: 1;
+      }
+
+      &-content {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0;
+      }
+    }
+
+    .mat-ink-bar {
+      display: none;
+    }
+  }
+}
+
+
+.mat-tab-body-wrapper {
+  box-shadow: 0 0 12px rgba(58, 51, 46, 0.2);
+  margin-top: -2px;
+}
+
+.mat-tab-body {
+  background: #fff;
+  border-top-right-radius: 5px;
+  padding-top: 50px;
+}
+
+.mat-tab-body-content {
+  position: relative;
+}
+
+
+// ng-select
+.ng-select:focus,
+.ng-select.focused,
+.ng-select.focused:not(.opened) {
+  outline: 0;
+
+  &>.ng-control {
+    border: 1px solid #8a8a8a;
+    box-shadow: 0 0 5px #cacaca;
+    outline: 0;
   }
 }
 
 .ng-select,
 .ng-select.opened {
+
   input {
     height: auto;
     line-height: 1;

@@ -15,9 +15,19 @@ describe('ContactFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule, LangModule, HttpClientModule, NgSelectModule, MatCheckboxModule ],
-      declarations: [ ContactFormComponent ],
-      providers: [ UserService ]
+      imports: [
+        FormsModule,
+        LangModule,
+        HttpClientModule,
+        NgSelectModule,
+        MatCheckboxModule
+      ],
+      declarations: [
+        ContactFormComponent
+       ],
+      providers: [
+        UserService
+      ]
     })
     .compileComponents();
   }));

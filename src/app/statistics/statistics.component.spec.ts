@@ -2,34 +2,39 @@ import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 import { LangModule } from '../lang/lang.module';
-import { BlogPostComponent } from './blog-post.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PostService } from '../services/post.service';
+import { StatisticsComponent } from './statistics.component';
 
-describe('BlogPostComponent', () => {
-  let component: BlogPostComponent;
-  let fixture: ComponentFixture<BlogPostComponent>;
+import { DataService } from '../services/data.service';
+
+describe('StatisticsComponent', () => {
+  let component: StatisticsComponent;
+  let fixture: ComponentFixture<StatisticsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        LangModule,
+        MatTabsModule,
         MatIconModule,
         HttpClientModule,
-        LangModule
+        BrowserAnimationsModule
       ],
       declarations: [
-        BlogPostComponent
-       ],
+        StatisticsComponent
+      ],
       providers: [
-        PostService
+        DataService
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlogPostComponent);
+    fixture = TestBed.createComponent(StatisticsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

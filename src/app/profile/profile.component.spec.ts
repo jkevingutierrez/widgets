@@ -13,9 +13,16 @@ describe('ProfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ LangModule, HttpClientModule ],
-      declarations: [ ProfileComponent ],
-      providers: [ UserService ]
+      imports: [
+        LangModule,
+        HttpClientModule
+      ],
+      declarations: [
+        ProfileComponent
+      ],
+      providers: [
+        UserService
+      ]
     })
     .compileComponents();
   }));
