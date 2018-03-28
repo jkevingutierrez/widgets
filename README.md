@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Data Config
 
-You can modify the dynamic data in the mocks files. You just need to edit the files in the folder [`src/app/mocks/`](./src/app/mocks)
+You can modify the dynamic data in the mocks files. You just need to edit the files in the folder [`src/app/mocks/`](./src/app/mocks).
 
 ## Requirements 
 

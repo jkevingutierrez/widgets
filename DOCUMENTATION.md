@@ -1,20 +1,20 @@
 # Widgets
 
-I made this project based on the .psd file and I tried to develop each widget in a modular way. In the folder [`src/app/`](./src/app/) you can find each component used by each widget (blog-post, contact-form, statistics and profile).
+The project was build based on the .psd file and I tried to develop each widget in a modular way. In the folder [`src/app/`](./src/app/) you can find each component used by each widget (blog-post, contact-form, statistics and profile).
 
-If you open the app, you will see something similar to the psd. You can resize the screen to see each widget in different sizes
+If you open the app, you will see something similar to the psd. You can resize the screen to see each widget in different sizes.
 
-I choosen this 4 widgets because I like the design of that widgets, and I also found interesting to develop them, they are different between each other, so the challenge could be bigger.
+I choosen that 4 widgets because I like the design of them, and I also found interesting to develop them because they are different between each other.
 
-I didn't use json files to get the data information, instead I chose to mock the files and use rxjs to convert that data in Observables wich are used for the respective service
+The project dont use json files to get the data information, instead I choose to mock the files and use rxjs to convert that data in Observables wich are used in the respective service.
 
-I used some json files to build the support for i8n and the library @ngx-translate.
+The support for i18n was build using the library `@ngx-translate`.
 
-As a design framework I selected Foundation and @angular/material and @ng-select in order to save work and make a better design.
+As a design framework, the project use `Foundation`, `@angular/material` and `@ng-select` in order to save work and have a better design.
 
-As a chart library I used google-charts
+As a chart library the widgets uses `Google Charts`.
 
-You can see each library and the version in [`package.json`](./package.json)
+You can see each library and the version in [`package.json`](./package.json).
 
 ## Modify data
 

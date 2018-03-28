@@ -11,9 +11,10 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// NgSelect
 @import '~@ng-select/ng-select/themes/default.theme.css';
 
-// global
+// Global
 body {
   background: url('assets/images/background.jpg') center top repeat;
   background-size: 100%;
@@ -138,7 +139,6 @@ a {
   }
 }
 
-
 .mat-tab-body-wrapper {
   box-shadow: 0 0 12px rgba(58, 51, 46, 0.2);
   margin-top: -2px;
@@ -153,7 +153,6 @@ a {
 .mat-tab-body-content {
   position: relative;
 }
-
 
 // ng-select
 .ng-select:focus,

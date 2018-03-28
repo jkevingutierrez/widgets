@@ -24,7 +24,7 @@ export class ContactFormComponent implements OnInit {
     if (this.mail.message && this.mail.subject && this.mail.contacts.length > 0) {
       console.log('Email sent');
     } else {
-      console.error('Invalid form');
+      console.error('The form have some empty or invalid values');
     }
   }
 }
