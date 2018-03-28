@@ -12,6 +12,9 @@ git config --global user.email "$GH_EMAIL"
 git config --global user.name "$GH_NAME"
 
 # Push, but send any output to /dev/null to hide anything sensitive
+git subtree split --prefix dist -b gh-pages
+git push -f origin gh-pages:gh-pages
+git branch -D gh-pages
 git subtree push --prefix dist origin gh-pages
 
 echo "Finished Deployment!"
