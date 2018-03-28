@@ -1,34 +1,35 @@
 import { HttpClientModule } from '@angular/common/http';
-
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatIconModule } from '@angular/material/icon';
 import { LangModule } from '../lang/lang.module';
-import { ProfileComponent } from './profile.component';
+import { BlogPostComponent } from './blog-post.component';
 
-import { UserService } from '../services/user.service';
+import { PostService } from '../services/post.service';
 
-describe('ProfileComponent', () => {
-  let component: ProfileComponent;
-  let fixture: ComponentFixture<ProfileComponent>;
+describe('BlogPostComponent', () => {
+  let component: BlogPostComponent;
+  let fixture: ComponentFixture<BlogPostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        LangModule,
-        HttpClientModule
+        MatIconModule,
+        HttpClientModule,
+        LangModule
       ],
       declarations: [
-        ProfileComponent
-      ],
+        BlogPostComponent
+       ],
       providers: [
-        UserService
+        PostService
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileComponent);
+    fixture = TestBed.createComponent(BlogPostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

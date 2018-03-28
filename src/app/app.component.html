@@ -1,12 +1,12 @@
 <div class="container container-wide">
   <div class="content">
     <div class="grid-container">
-      <div class="grid-x">
+      <div class="grid-x grid-margin-x">
         <div class="cell large-2">
           <mat-form-field>
-            <mat-select placeholder="Select language">
-              <mat-option *ngFor="let language of languages" [value]="selectedLanguage">
-                {{ language }}
+            <mat-select [placeholder]="'SELECT_LANGUAGE' | translate" [(ngModel)]="selectedLanguage" (change)="changeLang()">
+              <mat-option *ngFor="let language of languages$ | async" [value]="language">
+                {{ language.nativeName }}
               </mat-option>
             </mat-select>
           </mat-form-field>
@@ -14,15 +14,19 @@
       </div>
     </div>
     <div class="grid-container">
-      <div class="grid-x">
+      <div class="grid-x grid-margin-x">
         <div class="cell large-8">
-          <div class="grid-x">
+          <div class="grid-x grid-margin-x">
             <div class="cell large-6">
               <app-profile></app-profile>
+            </div>
+            <div class="cell large-6">
+              <app-statistics></app-statistics>
             </div>
           </div>
         </div>
         <div class="cell large-4">
+          <app-blog-post></app-blog-post>
           <app-contact-form></app-contact-form>
         </div>
       </div>

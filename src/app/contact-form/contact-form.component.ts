@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Form } from './form';
+import { Mail } from '../entities/mail';
+import { User } from '../entities/user';
+import { Observable } from 'rxjs/Observable';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -8,11 +11,20 @@ import { Form } from './form';
 })
 export class ContactFormComponent implements OnInit {
 
-  form = new Form();
+  mail = new Mail();
+  users$: Observable<User[]>;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.users$ = this.userService.get();
   }
 
+  sendEmail() {
+    if (this.mail.message && this.mail.subject && this.mail.contacts.length > 0) {
+      console.log('Email sent');
+    } else {
+      console.error('Invalid form');
+    }
+  }
 }

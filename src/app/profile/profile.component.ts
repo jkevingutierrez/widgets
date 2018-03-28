@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user';
+import { Observable } from 'rxjs/Observable';
+
+import { User } from '../entities/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,20 +11,11 @@ import { User } from './user';
 })
 export class ProfileComponent implements OnInit {
   user: User;
-  pinMapIcon = 'pin-map';
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.user = new User();
-
-    this.user.firstName = 'Courtney';
-    this.user.lastName = 'Timmons';
-    this.user.followers = 15323;
-  }
-
-  modifyPinMapIcon(icon: string) {
-    this.pinMapIcon = icon;
+    this.userService.getById(1).subscribe(user => this.user = user);
   }
 
 }

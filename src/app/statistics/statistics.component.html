@@ -1,0 +1,48 @@
+<section class="widget" *ngIf="data">
+  <div class="widget--body">
+    <div class="widget--charts">
+      <mat-tab-group (selectedTabChange)="validateChart($event)">
+        <mat-tab label="Diagram Stats">
+          <h6>Data Transfer</h6>
+          <div class="chart-details">
+            <span class="files-text">{{ getTotalFromData(data[0].data) | number:'3.0' }} {{ 'FILES' | translate }}</span>
+            <span class="space-text">{{ getTotalFromData(data[1].data) | number:'3.0' }} {{ data[0].description }}</span>
+          </div>
+          <div class="chart-container" id="donut-chart">
+          </div>
+        </mat-tab>
+        <mat-tab label="Month Report">
+          <h6>Data Chart</h6>
+          <div class="chart-container" id="column-chart">
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <div class="chart-labels">
+      <div class="label" *ngFor="let info of infos | slice:0:3" [ngStyle]="{'border-color': info.color.color}">
+        <span class="label-text">{{ info.name }}</span>
+        <strong class="label-percentage">{{ info.value | number:'0.0' }}%</strong>
+      </div>
+    </div>
+  </div>
+  <div class="widget--buttons">
+    <div class="button-container">
+      <a href="#">
+        <mat-icon class="no-hover upload" svgIcon="upload"></mat-icon>
+        <span>{{ 'UPLOAD_FILES' | translate }}</span>
+      </a>
+    </div>
+    <div class="button-container">
+      <a href="#">
+        <mat-icon class="no-hover share" svgIcon="share"></mat-icon>
+        <span>{{ 'SHARE_LINK' | translate }}</span>
+      </a>
+    </div>
+    <div class="button-container">
+      <a href="#">
+        <mat-icon class="no-hover backup" svgIcon="backup"></mat-icon>
+        <span>{{ 'BACK_UP' | translate }}</span>
+      </a>
+    </div>
+  </div>
+</section>
