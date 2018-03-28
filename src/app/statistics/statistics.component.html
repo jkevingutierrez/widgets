@@ -27,10 +27,13 @@
   </div>
   <div class="widget--buttons">
     <div class="button-container">
-      <a href="#">
-        <mat-icon class="no-hover upload" svgIcon="upload"></mat-icon>
-        <span>{{ 'UPLOAD_FILES' | translate }}</span>
-      </a>
+      <input type="file" id="file" name="files[]" multiple>
+      <label for="file">
+        <a href="#">
+          <mat-icon class="no-hover upload" svgIcon="upload"></mat-icon>
+          <span>{{ 'UPLOAD_FILES' | translate }}</span>
+        </a>
+      </label>
     </div>
     <div class="button-container">
       <a href="#">
