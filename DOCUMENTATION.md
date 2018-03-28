@@ -1,14 +1,14 @@
 # Widgets
 
-The project was build based on the .psd file and I tried to develop each widget in a modular way. In the folder [`src/app/`](./src/app/) you can find each component used by each widget (blog-post, contact-form, statistics and profile).
+The project was built based on the .psd file and I tried to develop each widget in a modular way. In the folder [`src/app/`](./src/app/) you can find each component used by each widget (blog-post, contact-form, statistics and profile).
 
-If you open the app, you will see something similar to the psd. You can resize the screen to see each widget in different sizes.
+If you open the app, you will see something like the psd. You can re-size the screen to see each widget in different sizes.
 
-I choosen that 4 widgets because I like the design of them, and I also found interesting to develop them because they are different between each other.
+I choose that four widgets because I like the design of them, and I also found interesting to develop them because they are different between each other.
 
-The project dont use json files to get the data information, instead I choose to mock the files and use rxjs to convert that data in Observables wich are used in the respective service.
+The project don't use `JSON` files to get the data information. Instead, I choose to mock the files and use `RXJS` to convert that data in Observables which are used in the respective service.
 
-The support for i18n was build using the library `@ngx-translate`.
+The support for i18n was built using the library `@ngx-translate`.
 
 As a design framework, the project use `Foundation`, `@angular/material` and `@ng-select` in order to save work and have a better design.
 
@@ -18,7 +18,7 @@ You can see each library and the version in [`package.json`](./package.json).
 
 ## Modify data
 
-- To modify the words used by each langugage you can go to [`src/assets/i18n/`](./src/assets/i18n) and edit each langugage file.
+- To modify the words used by each language you can go to [`src/assets/i18n/`](./src/assets/i18n) and edit each language file.
 - To modify the dynamic data you can go to [`src/app/mocks/`](./src/app/mocks) and edit each file.
 
 ## Requirements
