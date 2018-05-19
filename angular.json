@@ -19,6 +19,7 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
+              "src/touch-icon-iphone.png",
               "src/robots.txt"
             ],
             "styles": [
