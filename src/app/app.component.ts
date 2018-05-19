@@ -1,6 +1,6 @@
 import { Component, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { Lang } from './entities/lang';
 import { LangService } from './services/lang.service';
