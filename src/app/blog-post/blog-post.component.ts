@@ -3,7 +3,6 @@ import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { Post } from '../entities/post';
-import { User } from '../entities//user';
 import { PostService } from '../services/post.service';
 
 @Component({
